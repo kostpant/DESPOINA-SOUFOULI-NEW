@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+
+  --color-foreground: var(--foreground-rgb);
+  --color-background: var(--background-start-rgb);
+
+  /* Brand Colors */
+  --color-brand-black: #121212;
+  --color-brand-gold: #C6A87C;
+  --color-brand-gold-dark: #9A7B4F;
+  --color-brand-cream: #F9F5F1;
+
+  /* Map generic color utilities to brand if desired, or just use brand-* */
+  --color-amber-500: var(--color-brand-gold);
+  --color-amber-800: var(--color-brand-gold-dark);
+}
+
+/* Custom Utilities / Base Styles */
+@layer base {
+  body {
+    background-color: rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+  }
+}
+
+:root {
+  --foreground-rgb: 0 0 0;
+  --background-start-rgb: 255 255 255;
+  --background-end-rgb: 255 255 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Optional dark mode override if we want auto-dark, 
+       but design spec focused on light/premium or specific dark sections 
+    */
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+  /* neutral-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  /* neutral-700 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+  /* neutral-600 */
+}
